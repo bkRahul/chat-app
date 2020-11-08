@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MessageBox = styled.div`
   background: #f3f3f3;
@@ -7,7 +7,7 @@ export const MessageBox = styled.div`
   color: white;
   display: inline-block;
   max-width: 80%;
-  background-color: ${props => props.bg};
+  background-color: ${(props) => props.bg};
 `;
 
 export const MessageText = styled.p`
@@ -15,16 +15,16 @@ export const MessageText = styled.p`
   width: 100%;
   letter-spacing: 0;
   float: left;
-  font-size: 1.1em;
+  font-size: 1em;
   word-wrap: break-word;
-  color: ${props => props.color};
+  color: ${(props) => props.color};
 `;
 
 export const MessageContainer = styled.div`
   display: flex;
   padding: 0 5%;
   margin-top: 3px;
-  justify-content: ${props => props.justify};
+  justify-content: ${(props) => props.justify};
 `;
 export const SentText = styled.p`
   margin: 0;
@@ -33,7 +33,7 @@ export const SentText = styled.p`
   font-family: Helvetica;
   color: #828282;
   letter-spacing: 0.3px;
-  padding: ${props => props.padding};
+  padding: ${(props) => props.padding};
 `;
 
 export const MessageTextImg = styled.img`

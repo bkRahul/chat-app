@@ -1,7 +1,7 @@
-import React from 'react';
-import { Form, SendButton, InputContainer } from './Input.styled';
+import React from "react";
+import { Form, SendButton, InputContainer } from "./Input.styled";
 
-export const Input = ({ message, setMessage, sendMessage }) => {
+export const Input = ({ message, setMessage, sendMessage, setShowSidebar }) => {
   return (
     <Form>
       <InputContainer
@@ -10,9 +10,15 @@ export const Input = ({ message, setMessage, sendMessage }) => {
         placeholder="Type a message..."
         value={message}
         onChange={({ target: { value } }) => setMessage(value)}
-        onKeyPress={e => (e.key === 'Enter' ? sendMessage(e) : null)}
+        onKeyPress={(e) => (e.key === "Enter" ? sendMessage(e) : null)}
       />
-      <SendButton className="sendButton" onClick={e => sendMessage(e)}>
+      <SendButton
+        className="sendButton"
+        onClick={(e) => {
+          sendMessage(e);
+          setShowSidebar(false);
+        }}
+      >
         Send
       </SendButton>
     </Form>

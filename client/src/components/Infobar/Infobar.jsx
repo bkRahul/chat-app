@@ -1,18 +1,23 @@
-import React from 'react';
-import onlineIcon from '../../assets/images/onlineIcon.png';
-import closeIcon from '../../assets/images/closeIcon.png';
+import React from "react";
+import closeIcon from "../../assets/images/closeIcon.png";
+import burgerIcon from "../../assets/images/hamburger.png";
+
 import {
   LeftInnerContainer,
   InfoBarContainer,
-  OnlineIcon,
   RightInnerContainer,
-} from './Infobar.styled';
+  BurgerIcon,
+} from "./Infobar.styled";
 
-export const Infobar = ({ room }) => {
+export const Infobar = ({ room, setShowSidebar, showSidebar }) => {
   return (
     <InfoBarContainer>
+      <BurgerIcon
+        src={burgerIcon}
+        alt="menu"
+        onClick={() => setShowSidebar(!showSidebar)}
+      />
       <LeftInnerContainer>
-        <OnlineIcon src={onlineIcon} alt="online" />
         <h3>{room}</h3>
       </LeftInnerContainer>
       <RightInnerContainer>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ChatOuterContainer = styled.div`
   display: flex;
@@ -6,10 +6,6 @@ export const ChatOuterContainer = styled.div`
   align-items: center;
   height: 100vh;
   background-color: #1a1a1d;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    height: 100%;
-  }
 `;
 
 export const ChatContainer = styled.div`
